@@ -36,3 +36,32 @@ function revealOnScroll() {
 
 window.addEventListener("scroll", revealOnScroll);
 revealOnScroll();
+
+
+// --- PROJECT SLIDER LOGIC ---
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Fungsi untuk tombol Next/Prev
+function changeSlide(n) {
+  showSlides(slideIndex += n);
+}
+
+// Fungsi utama untuk menampilkan slide
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("slide");
+  
+  // Jika melewati batas akhir, kembali ke awal
+  if (n > slides.length) { slideIndex = 1 }
+  // Jika mundur sebelum awal, pergi ke paling akhir
+  if (n < 1) { slideIndex = slides.length }
+  
+  // Sembunyikan semua slide
+  for (i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("active");
+  }
+  
+  // Tampilkan slide yang sesuai
+  slides[slideIndex - 1].classList.add("active");
+}
