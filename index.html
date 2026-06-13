@@ -92,10 +92,57 @@
     </div>
   </section>
 
+  <section id="pendidikan" class="reveal">
+    <h2>Education</h2>
+    <div class="card">
+      <div class="edu">
+        <h3>Universitas Sumatera Utara</h3>
+        <p>Fakultas Ilmu Komputer dan Teknologi Informasi</p>
+        <span>Teknologi Informasi (S-1)</span>
+      </div>
+      <div class="edu">
+        <h3>SMAS Bina Taruna</h3>
+        <p>Matematika dan Ilmu Pengetahuan Alam (MIPA)</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skill" class="reveal">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>HTML</h3>
+        <span class="level advanced">Advanced</span>
+      </div>
+      <div class="skill-card">
+        <h3>CSS</h3>
+        <span class="level advanced">Advanced</span>
+      </div>
+      <div class="skill-card">
+        <h3>JavaScript</h3>
+        <span class="level basic">Basic</span>
+      </div>
+      <div class="skill-card">
+        <h3>Node.js</h3>
+        <span class="level basic">Basic</span>
+      </div>
+      <div class="skill-card">
+        <h3>Express.js</h3>
+        <span class="level basic">Basic</span>
+      </div>
+      <div class="skill-card">
+        <h3>MySQL</h3>
+        <span class="level intermediate">intermediate</span>
+      </div>
+    </div>
+  </section>
+
   <section id="project" class="projects reveal">
     <h2 class="section-title">My Project</h2>
     
     <div class="slider-container">
+      <button class="nav-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+
       <div class="project-card slide active">
         <img src="projekBandung.jpeg" alt="Website ExploreBandung">
         <div class="project-content">
@@ -107,30 +154,32 @@
             The website is designed to help users plan their trips in a practical and informative manner. 
             Currently, the website is still under development and has not yet been publicly released.
           </p>
-          <a href="https://github.com/nofallcr/TUBESBANDUNG/tree/master" target="_blank" rel="noopener noreferrer" class="project-link">
+          <a href="https://github.com/nofallcr/TUBESBANDUNG/tree/master"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link">
             See more
           </a>
         </div>
       </div>
 
       <div class="project-card slide">
-        <img src="projekBelajarkuy.jpg" alt="Website BelajarKUY">
+        <img src="projekBelajarkuy.jpeg" alt="Website BelajarKUY">
         <div class="project-content">
           <h3><strong>Website BelajarKUY</strong></h3>
           <p>
-            BelajarKUY lahir dari semangat 5 mahasiswa yang ingin membuktikan bahwa proyek akademik bisa setara dengan produk nyata. Kami membangun platform marketplace e-learning berbasis teknologi modern — mulai dari autentikasi, sistem pembayaran, hingga course player berbasis video — dalam satu semester penuh.<br><br>
-            Nama "BelajarKUY" mencerminkan semangat kami: yuk belajar! — mengajak siapa saja untuk terus bertumbuh dengan cara yang menyenangkan dan terjangkau.
+            BelajarKUY lahir dari semangat 5 mahasiswa yang ingin membuktikan bahwa proyek akademik bisa setara dengan produk nyata. Kami membangun platform marketplace e-learning berbasis teknologi modern — mulai dari autentikasi, sistem pembayaran, hingga course player berbasis video — dalam satu semester penuh.
           </p>
-          <a href="https://www.belajarkuy.site" target="_blank" rel="noopener noreferrer" class="project-link">
+          <a href="https://www.belajarkuy.site"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link">
             Visit Website
           </a>
         </div>
       </div>
-    </div>
 
-    <div class="slider-controls">
-      <button class="nav-btn" onclick="changeSlide(-1)">&#10094; Previous</button>
-      <button class="nav-btn" onclick="changeSlide(1)">Next &#10095;</button>
+      <button class="nav-btn next" onclick="changeSlide(1)">&#10095;</button>
     </div>
   </section>
 

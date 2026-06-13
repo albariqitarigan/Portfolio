@@ -26,19 +26,20 @@ body {
   transition: all 0.8s ease;
 }
 
-/* --- SLIDER PROJECT STYLES --- */
 .slider-container {
   position: relative;
   width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .project-card.slide {
-  display: none; /* Sembunyikan semua project secara default */
+  display: none;
   animation: fadeEffect 0.6s ease-in-out;
 }
 
 .project-card.slide.active {
-  display: flex; /* Tampilkan hanya project yang aktif */
+  display: flex;
 }
 
 @keyframes fadeEffect {
@@ -53,26 +54,44 @@ body {
   margin-top: 30px;
 }
 
-.slider-controls .nav-btn {
-  padding: 10px 24px;
-  background-color: var(--primary);
-  color: white;
-  border: none;
-  border-radius: 999px;
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: #f8fafc;
+  color: #6b7280; 
+  border: 3px solid #9ca3af;
+  border-radius: 50%;
+  font-size: 24px;
+  font-weight: bold;
   cursor: pointer;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: background 0.3s, transform 0.3s;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: all 0.3s ease;
 }
+
+.nav-btn:hover {
+  background-color: #e2e8f0;
+  border-color: #4b5563;
+  color: #4b5563;
+}
+
+.nav-btn.prev { left: -25px; }
+.nav-btn.next { right: -25px; }
 
 .slider-controls .nav-btn:hover {
   background-color: #15803d;
   transform: translateY(-2px);
 }
 
-/* Penyesuaian responsif agar tidak rusak di layar kecil */
-@media (max-width: 768px) {
+@media (max-width: 850px) {
+  .nav-btn.prev { left: -10px; }
+  .nav-btn.next { right: -10px; }
+  
   .project-card.slide.active {
     flex-direction: column;
   }
